@@ -116,27 +116,27 @@ namespace Fardis.Test
             {
                 @"gq7cv-.,jgh]g/منی‏‎سیبت‫سیبت‬سیبنتا۳۴۵ بمی یوــ",
                 @"‎بینتlkjf8‪‬‫ewpمنیبل-‪ثصگذmcvkjq-     dxfglk0e",
-                @"f,mo‏i`cv;l/زذ\\یبلجحص ‍ ÷÷یب",
+                @"f,mo‏i`cv;l/زذxxیبلجحص",
                 @"سیبٌ٫سیسی‬بمنخ۹LKF‪POO+}:M<N<LKDJ",
-                @"dfglkoepwإأ٫[ًٍّءٰإکخحس‫"
+                "jh\u202ejپالعJ*N)]غhg"
             };
 
             string[] expected1 = new string[testCount]
             {
-                @"gq7cv-.,jgh]g/منیسیبت_سیبتسیبنتا۳۴۵ بمی یوــ",
-                @"_بینتlkjf8___ewpمنیبل-‪ثصگذmcvkjq-     dxfglk0e",
-                @"f,mo_i`cv;l/زذ\\یبلجحص _ ÷÷یب",
+                @"gq7cv-.,jgh]g/منی__سیبت_سیبت_سیبنتا۳۴۵ بمی یوــ",
+                @"_بینتlkjf8___ewpمنیبل-_ثصگذmcvkjq-     dxfglk0e",
+                @"f,mo_i`cv;l/زذxxیبلجحص",
                 @"سیبٌ٫سیسی_بمنخ۹LKF_POO+}:M<N<LKDJ",
-                @"dfglkoepwإأ٫[ًٍّءٰإکخحس‫"
+                "jh_jپالعJ*N)]غhg"
             };
 
             string[] expected2 = new string[testCount]
             {
-                @"gq7cv-.,jgh]g/منیسیبت@سیبتسیبنتا۳۴۵ بمی یوــ",
-                @"@بینتlkjf8@@@ewpمنیبل-‪ثصگذmcvkjq-     dxfglk0e",
-                @"f,mo@i`cv;l/زذ\\یبلجحص @ ÷÷یب",
+                @"gq7cv-.,jgh]g/منی@@سیبت@سیبت@سیبنتا۳۴۵ بمی یوــ",
+                @"@بینتlkjf8@@@ewpمنیبل-@ثصگذmcvkjq-     dxfglk0e",
+                @"f,mo@i`cv;l/زذxxیبلجحص",
                 @"سیبٌ٫سیسی@بمنخ۹LKF@POO+}:M<N<LKDJ",
-                @"dfglkoepwإأ٫[ًٍّءٰإکخحس‫"
+                "jh@jپالعJ*N)]غhg"
             };
 
             for (int i = 0; i < testCount; i = i + 1)

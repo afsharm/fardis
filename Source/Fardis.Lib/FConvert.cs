@@ -82,7 +82,16 @@ namespace Fardis
 
         public static string ReplaceControlCharacters(string source, string replaceCharacter)
         {
-            throw new NotImplementedException();
+            return source
+                .Replace("\u202a", replaceCharacter)
+                .Replace("\u202b", replaceCharacter)
+                .Replace("\u202c", replaceCharacter)
+                .Replace("\u202d", replaceCharacter)
+                .Replace("\u202e", replaceCharacter)
+                .Replace("\u200e", replaceCharacter)
+                .Replace("\u200f", replaceCharacter)
+                .Replace("\u200c", replaceCharacter)
+                .Replace("\u2004", replaceCharacter);
         }
 
         public static string ConvertUrlBadCharacters(string source)
