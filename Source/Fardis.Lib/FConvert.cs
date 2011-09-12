@@ -50,34 +50,32 @@ namespace Fardis
 
         public static string ToPersianYehKeh(string source)
         {
-            throw new NotImplementedException();
-
-            //             return englishOrArabicDigit
-            //        .Replace("\u0649", "\u06cc") 
-            //        .Replace("\u064a", "\u06cc")
-            //        .Replace("\u063d", "\u06cc")
-            //        .Replace("\u063e", "\u06cc")
-            //        .Replace("\u063f", "\u06cc")
-            //        .Replace("\u064a", "\u06cc")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
-            //        .Replace("\u", "\u")
+            return source
+               .Replace("\u0649", "\u06cc")
+               .Replace("\u064a", "\u06cc")
+               .Replace("\u063d", "\u06cc")
+               .Replace("\u063e", "\u06cc")
+               .Replace("\u063f", "\u06cc")
+               .Replace("\u064a", "\u06cc")
+               .Replace("\u06aa", "\u06a9")
+               .Replace("\u0643", "\u06a9")
+               .Replace("\u06ab", "\u06a9");
         }
 
         public static string ToAsciiOnly(string source)
         {
-            throw new NotImplementedException();
+            string retval = string.Empty;
+
+            for (int i = 0; i < source.Length; i++)
+                if ((int)source[i] < 128)
+                    retval += source[i];
+
+            return retval;
         }
 
         public static string RemoveControlCharacters(string source)
         {
-            throw new NotImplementedException();
+            return ReplaceControlCharacters(source, string.Empty);
         }
 
         public static string ReplaceControlCharacters(string source, string replaceCharacter)
@@ -113,6 +111,11 @@ namespace Fardis
         public static string MakeUrlFriendly(string source)
         {
             return ConvertUrlBadCharacters(ReplaceControlCharacters(source, "_"));
+        }
+
+        public static string ToPersianTotal(string source)
+        {
+            return ToPersianDigit(ToPersianYehKeh(source));
         }
     }
 }

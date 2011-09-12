@@ -24,13 +24,15 @@ namespace Fardis.Test
         [Test]
         public void HasRtlTextTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(EncodingHelper.HasRtlText("hjkduekلsdoekjsd 389x9df skdhsd 9sdfu "));
+            Assert.IsFalse(EncodingHelper.HasRtlText("hjkdueksdoekjsd 389x9df skdhsd 9sdfu "));
         }
 
         [Test]
         public void IsRtlCharTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(EncodingHelper.IsRtlChar('ش'));
+            Assert.IsFalse(EncodingHelper.IsRtlChar('A'));
         }
     }
 }

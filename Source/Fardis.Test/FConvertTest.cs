@@ -69,7 +69,7 @@ namespace Fardis.Test
 
             string[] expected = new string[testCount]
             {
-                @"e//6145788/html",
+                @"e//6145788/-.html",
                 @"1390/6/20  1390/6/21",
                 @"   ",
                 @" ,  : SQL",
@@ -98,8 +98,8 @@ namespace Fardis.Test
             {
                 @"e/آگهي/6145788/بهيكخانمبرنامهنويسآشنا-به.html",
                 @"میتوان رفت",
-                @"یک دو سه‎ جه‏ار",
-                @"مراس‭م ن‮ستیب kjshdf oe‫i‮woie‪ur مسیب‫سیب",
+                @"یک دو سه جهار",
+                @"مراسم نستیب kjshdf oeiwoieur مسیبسیب",
                 @"Google tells Iranian Gmail users to beware of suspicious prompts "
             };
 
@@ -174,7 +174,7 @@ namespace Fardis.Test
         }
 
         [Test]
-        public void MakeUrlFriendly()
+        public void MakeUrlFriendlyTest()
         {
             const int testCount = 5;
 
@@ -183,7 +183,7 @@ namespace Fardis.Test
                 @"http://iran.ir/hhhh/jh",
                 @"این یک تست است. ولی مهم است،",
                 @"",
-                @"۳۴ققف۴۴۹۸۹۸ثقف8‫487",
+                @"۳۴ققف۴۴۹۸۹۸ثقف8‫487.aspx.cs",
                 @"‪سیسیبLKFL:,dsfef"
             };
 
@@ -192,12 +192,39 @@ namespace Fardis.Test
                 @"http___iran_ir_hhhh_jh",
                 @"این_یک_تست_است__ولی_مهم_است_",
                 @"",
-                @"۳۴ققف۴۴۹۸۹۸ثقف8487",
-                @"سیسیبLKFL__dsfef"
+                @"۳۴ققف۴۴۹۸۹۸ثقف8_487_aspx_cs",
+                @"_سیسیبLKFL__dsfef"
             };
 
             for (int i = 0; i < testCount; i = i + 1)
                 Assert.AreEqual(expected[i], FConvert.MakeUrlFriendly(raw[i]), i.ToString());
+        }
+
+        [Test]
+        public void ToPersianTotalTest()
+        {
+            const int testCount = 5;
+
+            string[] raw = new string[testCount]
+            {
+                "dkيي30میب۰ي۳7۰dfgpk94l48kdfl۱منكتیبلخ۴",
+                "بلاک-۳کكظٓيمسیدطصقجغهو.طذ",
+                "رپدظطرظط.ىرزضثصهف۰۹۸۴نتب",
+                "پوكررظططظ۷۳۲۴۰-بیبل",
+                "/پزرذ۰۹۰۴۵مندی١نسح۹بنکمتیس"
+            };
+
+            string[] expected = new string[testCount]
+            {
+                "dkیی۳۰میب۰ی۳۷۰dfgpk۹۴l۴۸kdfl۱منکتیبلخ۴",
+                "بلاک-۳ککظٓیمسیدطصقجغهو.طذ",
+                "رپدظطرظط.یرزضثصهف۰۹۸۴نتب",
+                "پوکررظططظ۷۳۲۴۰-بیبل",
+                "/پزرذ۰۹۰۴۵مندی۱نسح۹بنکمتیس"
+            };
+
+            for (int i = 0; i < testCount; i = i + 1)
+                Assert.AreEqual(expected[i], FConvert.ToPersianTotal(raw[i]), i.ToString());
         }
     }
 }

@@ -404,8 +404,8 @@ namespace Fardis
 
             return false;
         }
-
-        private static bool IsRtlChar(char character)
+        
+        public static bool IsRtlChar(char character)
         {
             return (int)character > 128;
         }
