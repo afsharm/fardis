@@ -395,5 +395,19 @@ namespace Fardis
 
             return string.Format(@"\u{0:x4}", GetDecimal(ch));
         }
+
+        public static bool HasRtlText(string text)
+        {
+            for (int i = 0; i < text.Length; i++)
+                if (IsRtlChar(text[i]))
+                    return true;
+
+            return false;
+        }
+
+        private static bool IsRtlChar(char character)
+        {
+            return (int)character > 128;
+        }
     }
 }

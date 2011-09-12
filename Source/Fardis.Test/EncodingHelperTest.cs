@@ -20,5 +20,17 @@ namespace Fardis.Test
             for (int i = 0; i < chars.Length; i++)
                 Assert.AreEqual(csharp[i], EncodingHelper.GetCSharpRep(chars[i]));
         }
+
+        [Test]
+        public void HasRtlTextTest()
+        {
+            Assert.Fail();
+        }
+
+        [Test]
+        public void IsRtlCharTest()
+        {
+            Assert.Fail();
+        }
     }
 }

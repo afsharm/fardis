@@ -87,7 +87,18 @@ namespace Fardis
 
         public static string ConvertUrlBadCharacters(string source)
         {
-            throw new NotImplementedException();
+            return source
+                         .Replace('.', '_')
+                         .Replace(' ', '_')
+                         .Replace(',', '_')
+                         .Replace('،', '_')
+                         .Replace(';', '_')
+                         .Replace('\\', '_')
+                         .Replace('\'', '_')
+                         .Replace('`', '_')
+                         .Replace('-', '_')
+                         .Replace('/', '_')
+                         .Replace(':', '_');
         }
 
         public static string MakeUrlFriendly(string source)
