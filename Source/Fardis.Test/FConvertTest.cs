@@ -114,29 +114,29 @@ namespace Fardis.Test
 
             string[] raw = new string[testCount]
             {
-                "",
-                "",
-                "",
-                "",
-                ""
+                "gq7cv-.,jgh]g/منی‏‎سیبت‫سیبت‬سیبنتا۳۴۵ بمی یوــ",
+                "‎بینتlkjf8‪‬‫ewpمنیبل-‪ثصگذmcvkjq-     dxfglk0e",
+                "f,mo‏i`cv;l/زذ\\یبلجحص ‍ ÷÷یب",
+                "سیبٌ٫سیسی‬بمنخ۹LKF‪POO+}:M<N<LKDJ",
+                "dfglkoepwإأ٫[ًٍّءٰإکخحس‫"
             };
 
             string[] expected1 = new string[testCount]
             {
-                "",
-                "",
-                "",
-                "",
-                ""
+                "gq7cv-.,jgh]g/منیسیبت_سیبتسیبنتا۳۴۵ بمی یوــ",
+                "_بینتlkjf8___ewpمنیبل-‪ثصگذmcvkjq-     dxfglk0e",
+                "f,mo_i`cv;l/زذ\\یبلجحص _ ÷÷یب",
+                "سیبٌ٫سیسی_بمنخ۹LKF_POO+}:M<N<LKDJ",
+                "dfglkoepwإأ٫[ًٍّءٰإکخحس‫"
             };
 
             string[] expected2 = new string[testCount]
             {
-                "",
-                "",
-                "",
-                "",
-                ""
+                "gq7cv-.,jgh]g/منیسیبت@سیبتسیبنتا۳۴۵ بمی یوــ",
+                "@بینتlkjf8@@@ewpمنیبل-‪ثصگذmcvkjq-     dxfglk0e",
+                "f,mo@i`cv;l/زذ\\یبلجحص @ ÷÷یب",
+                "سیبٌ٫سیسی@بمنخ۹LKF@POO+}:M<N<LKDJ",
+                "dfglkoepwإأ٫[ًٍّءٰإکخحس‫"
             };
 
             for (int i = 0; i < testCount; i = i + 1)
@@ -153,20 +153,20 @@ namespace Fardis.Test
 
             string[] raw = new string[testCount]
             {
-                "",
-                "",
-                "",
-                "",
-                ""
+                "::df4bنیهق",
+                ";xdkjfhs;_837\\..,,fffنینیه",
+                "دص۸۲dfg';psdf",
+                "ckj`1-r,cm",
+                "dfkjg8w3mdkdjldkjg"
             };
 
             string[] expected = new string[testCount]
             {
-                "",
-                "",
-                "",
-                "",
-                ""
+                "__df4bنیهق",
+                "_xdkjfhs__837______fffنینیه",
+                "دص۸۲dfg__psdf",
+                "ckj_1_r_cm",
+                "dfkjg8w3mdkdjldkjg"
             };
 
             for (int i = 0; i < testCount; i = i + 1)
