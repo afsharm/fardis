@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeHelperTest.cs" />
     <Compile Include="EncodingHelperTest.cs" />
     <Compile Include="FConvertTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
