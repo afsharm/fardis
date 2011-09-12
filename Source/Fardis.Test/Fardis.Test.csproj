@@ -42,6 +42,7 @@
     <Compile Include="EncodingHelperTest.cs" />
     <Compile Include="FConvertTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fardis.Lib\Fardis.Lib.csproj">
