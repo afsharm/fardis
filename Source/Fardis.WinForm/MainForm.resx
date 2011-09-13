@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Fardis is a utility for Persian/Arabs that want know more about Unicode information of characters they use in their daily usage of computers and Internet. 
+    <value>Fardis is a tiny project as a library/application that helps Persians and other RTL based languages to have more information about Unicode, character code and other useful info about strings and characters. 
 
-Fardis tells you Unicode name, hex code, deciaml code and etc. information about characters you enter. It's very usefull when you are working with character but can't get information from its glyph.</value>
+Fardis also has a section related to other localization issues like date conversion and a section related string manipulating and string processing especially for Persian texts.	</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Fardis.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("PBME")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Fardis.Test")]
-[assembly: AssemblyCopyright("Copyright © PBME 2010")]
+[assembly: AssemblyCopyright("Copyright © Afshar Mohebbi 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.23.0.0")]
+[assembly: AssemblyFileVersion("0.23.0.0")]
