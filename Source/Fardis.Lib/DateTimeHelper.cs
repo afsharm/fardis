@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace Fardis
 {
-    public class DateTimeHelper : Fardis.IDateTimeHelper
+    public class DateTimeHelper : IDateTimeHelper
     {
         public string ConvertToPersianDate(DateTime? date)
         {
@@ -26,6 +26,43 @@ namespace Fardis
         public string ConvertToPersianDatePersianDigit(DateTime? date)
         {
             return FConvert.ToPersianDigit(ConvertToPersianDate(date));
+        }
+
+        public DateTime ConvertPersianToGregorainDate(string persianDate)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        DateTime IDateTimeHelper.ConvertPersianToGregorainDate(string persianDate)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public bool IsPersianYearLeap(int persianYear)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AddDatePersian(string sourcePersianDate, int day)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string DatePartPersian(string datePart, string sourcePersianDate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string DateDiffPersian(string datepart, string startdate, string enddate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsValidPersianDate(string source)
+        {
+            throw new NotImplementedException();
         }
     }
 }
