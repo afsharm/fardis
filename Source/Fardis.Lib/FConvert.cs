@@ -117,5 +117,36 @@ namespace Fardis
         {
             return ToPersianDigit(ToPersianYehKeh(source));
         }
+
+        public static string ToEnglishDigit(string persianOrArabicDigit)
+        {
+            //This method is based on ISIRI-6219
+
+            //Persian digits are different from Arabic digits. Persian digits are called 
+            //"Eastern Arabic-Indic digits" in Unicode standard. They start from U+06F0 while
+            //Arabic digits start from U+0660.
+
+            return persianOrArabicDigit
+                .Replace("\u06f0", "\u0030") //English 0
+                .Replace("\u06f1", "\u0031") //English 1
+                .Replace("\u06f2", "\u0032") //English 2
+                .Replace("\u06f3", "\u0033") //English 3
+                .Replace("\u06f4", "\u0034") //English 4
+                .Replace("\u06f5", "\u0035") //English 5
+                .Replace("\u06f6", "\u0036") //English 6
+                .Replace("\u06f7", "\u0037") //English 7
+                .Replace("\u06f8", "\u0038") //English 8
+                .Replace("\u06f9", "\u0039") //English 9
+                .Replace("\u0660", "\u0030") //Arabic 0
+                .Replace("\u0661", "\u0031") //Arabic 1
+                .Replace("\u0662", "\u0032") //Arabic 2
+                .Replace("\u0663", "\u0033") //Arabic 3
+                .Replace("\u0664", "\u0034") //Arabic 4
+                .Replace("\u0665", "\u0035") //Arabic 5
+                .Replace("\u0666", "\u0036") //Arabic 6
+                .Replace("\u0667", "\u0037") //Arabic 7
+                .Replace("\u0668", "\u0038") //Arabic 8
+                .Replace("\u0669", "\u0039"); //Arabic 9
+        }
     }
 }

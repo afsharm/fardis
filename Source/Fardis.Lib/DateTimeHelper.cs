@@ -28,17 +28,42 @@ namespace Fardis
             return FConvert.ToPersianDigit(ConvertToPersianDate(date));
         }
 
-        public DateTime ConvertPersianToGregorainDate(string persianDate)
+        public DateTime ConvertPersianToGregorianDate(string persianDate)
         {
-            throw new NotImplementedException();
+            string englishDigitPersianDate = FConvert.ToEnglishDigit(persianDate);
+            string[] tokens = englishDigitPersianDate.Split('/');
+
+            //validation
+            if (tokens.Length != 3)
+                throw new ArgumentException("Persian date must have 3 tokens");
+
+            string year = tokens[0];
+            string month = tokens[1];
+            string day = tokens[2];
+
+            if (year.Length != 2 && year.Length != 4)
+                throw new ArgumentException("persian year must be 2 or 4 digits");
+
+            if (month.Length > 2 || day.Length > 2)
+                throw new ArgumentException("persian month/day must have 2 digit maximum");
+
+            if (year.Length == 2)
+                year = "13" + year;
+
+            int yearValue = Convert.ToInt32(year);
+            int monthValue = Convert.ToInt32(month);
+            int dayValue = Convert.ToInt32(day);
+
+            if (monthValue < 1 || monthValue > 12)
+                throw new ArgumentException("month must be between 1 and 12");
+
+            if (dayValue < 1 || dayValue > 31)
+                throw new ArgumentException("day must be between 1 and 31");
+
+            PersianCalendar pc = new PersianCalendar();
+
+            return pc.ToDateTime(yearValue, monthValue, dayValue, 0, 0, 0, 0);
         }
-
-
-        DateTime IDateTimeHelper.ConvertPersianToGregorainDate(string persianDate)
-        {
-            throw new NotImplementedException();
-        }
-
 
         public bool IsPersianYearLeap(int persianYear)
         {

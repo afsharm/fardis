@@ -5,7 +5,7 @@ namespace Fardis
     {
         string ConvertToPersianDate(DateTime? date);
         string ConvertToPersianDatePersianDigit(DateTime? date);
-        DateTime ConvertPersianToGregorainDate(string persianDate);
+        DateTime ConvertPersianToGregorianDate(string persianDate);
         bool IsPersianYearLeap(int persianYear);
         string AddDatePersian(string sourcePersianDate, int day);
         string DatePartPersian(string datePart, string sourcePersianDate);

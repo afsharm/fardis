@@ -39,13 +39,14 @@ namespace Fardis.Test
         }
 
         [Test]
-        public void ConvertPersianToGregorainDateTest()
+        public void ConvertPersianToGregorianDateTest()
         {
-            Assert.AreEqual(Convert.ToDateTime("2011/09/13"), dateTimeHelper.ConvertPersianToGregorainDate("۱۳۹۰/۶/۲۲/"));
-            Assert.AreEqual(Convert.ToDateTime("2011/03/20"), dateTimeHelper.ConvertPersianToGregorainDate("۱۳۹۰/۱/۱"));
-            Assert.AreEqual(Convert.ToDateTime("2011/03/20"), dateTimeHelper.ConvertPersianToGregorainDate("۱۳۸۹/۱۲/۲۹"));
-            Assert.AreEqual(Convert.ToDateTime("2009/03/20"), dateTimeHelper.ConvertPersianToGregorainDate("۱۳۸۷/۱۲/۳۰"));
-            Assert.AreEqual(Convert.ToDateTime("2009/03/21"), dateTimeHelper.ConvertPersianToGregorainDate("۱۳۸۸/۱/۱"));
+            Assert.AreEqual(Convert.ToDateTime("2011/09/13"), dateTimeHelper.ConvertPersianToGregorianDate("۱۳۹۰/۶/۲۲"), "1");
+            Assert.AreEqual(Convert.ToDateTime("2011/03/21"), dateTimeHelper.ConvertPersianToGregorianDate("۱۳۹۰/۱/۱"), "2");
+            Assert.AreEqual(Convert.ToDateTime("2011/03/20"), dateTimeHelper.ConvertPersianToGregorianDate("۱۳۸۹/۱۲/۲۹"), "3");
+            Assert.AreEqual(Convert.ToDateTime("2009/03/20"), dateTimeHelper.ConvertPersianToGregorianDate("۱۳۸۷/۱۲/۳۰"), "4");
+            Assert.AreEqual(Convert.ToDateTime("2009/03/21"), dateTimeHelper.ConvertPersianToGregorianDate("۱۳۸۸/۱/۱"), "5");
+            Assert.AreEqual(Convert.ToDateTime("2009/03/21"), dateTimeHelper.ConvertPersianToGregorianDate("88/1/01"), "6");
         }
 
         [Test]

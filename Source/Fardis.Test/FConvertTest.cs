@@ -226,5 +226,14 @@ namespace Fardis.Test
             for (int i = 0; i < testCount; i = i + 1)
                 Assert.AreEqual(expected[i], FConvert.ToPersianTotal(raw[i]), i.ToString());
         }
+
+        [Test]
+        public void ToEnglishDigitTest()
+        {
+            Assert.AreEqual("0123456789", FConvert.ToEnglishDigit("0123456789"));
+            Assert.AreEqual("0123456789", FConvert.ToEnglishDigit("۰۱۲۳۴۵۶۷۸۹"));
+            Assert.AreEqual("0123456789", FConvert.ToEnglishDigit("۰1234۵۶۷۸9"));
+            Assert.AreEqual("0123456789", FConvert.ToEnglishDigit("0123٤567٨۹"));
+        }
     }
 }
