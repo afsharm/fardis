@@ -72,7 +72,13 @@ namespace Fardis
 
         public string AddDatePersian(string sourcePersianDate, int day)
         {
-            throw new NotImplementedException();
+            DateTime source = ConvertPersianToGregorianDate(sourcePersianDate);
+
+            DateTime addedDate = source.AddDays(day);
+
+            string target = ConvertToPersianDatePersianDigit(addedDate);
+
+            return target;
         }
 
         public string DatePartPersian(string datePart, string sourcePersianDate)

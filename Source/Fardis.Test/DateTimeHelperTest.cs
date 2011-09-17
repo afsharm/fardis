@@ -60,9 +60,9 @@ namespace Fardis.Test
         [Test]
         public void AddDatePersianTest()
         {
-            Assert.AreEqual("۱۳۸۵/۶/۲۰", dateTimeHelper.AddDatePersian("۱۳۸۵/۶/۱۷", 3));
-            Assert.AreEqual("۱۳۸۵/۷/۱۶", dateTimeHelper.AddDatePersian("۱۳۸۵/۶/۱۷", 30));
-            Assert.AreEqual("۱۳۸۶/۶/۲۰", dateTimeHelper.AddDatePersian("۱۳۸۵/۶/۱۷", 365));
+            Assert.AreEqual("۱۳۸۵/۶/۲۰", dateTimeHelper.AddDatePersian("۱۳۸۵/۶/۱۷", 3), "1");
+            Assert.AreEqual("۱۳۸۵/۷/۱۶", dateTimeHelper.AddDatePersian("۱۳۸۵/۶/۱۷", 30), "2");
+            Assert.AreEqual("۱۳۸۶/۶/۱۷", dateTimeHelper.AddDatePersian("۱۳۸۵/۶/۱۷", 365), "3");
         }
 
         [Test]
