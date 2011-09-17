@@ -85,12 +85,46 @@ namespace Fardis
 
         public string DatePartPersian(string datePart, string sourcePersianDate)
         {
-            throw new NotImplementedException();
+            string[] tokens = FConvert.ToEnglishDigit(sourcePersianDate).Split('/');
+            
+            switch (datePart.ToLower())
+            {
+                case "year":
+                    return tokens[0];
+                case "month":
+                    return tokens[1];
+                case "day":
+                    return tokens[2];
+                default:
+                    throw new ArgumentException("Invalid datePart");
+            }
         }
 
         public string DateDiffPersian(string datepart, string startdate, string enddate)
         {
-            throw new NotImplementedException();
+            DateTime start = ConvertPersianToGregorianDate(startdate);
+            DateTime end = ConvertPersianToGregorianDate(enddate);
+
+            TimeSpan ts = end - start;
+            string retval = string.Empty;
+
+            switch (datepart.ToLower())
+            {
+                //case "year":
+
+                //    break;
+                //case "month":
+                //    retval = ts.Mon.ToString();
+                //    break;
+                case "day":
+                    retval = ts.Days.ToString();
+                    break;
+                default:
+                    throw new ArgumentException("Invalid datepart");
+                    break;
+            }
+
+            return retval;
         }
 
         public bool IsValidPersianDate(string source)
