@@ -30,12 +30,12 @@ namespace Fardis.Test
         [Test]
         public void ConvertToPersianDatePersianDigitTest()
         {
-            Assert.AreEqual("۱۳۹۰/۶/۲۲/", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2011/09/13")));
-            Assert.AreEqual(string.Empty, dateTimeHelper.ConvertToPersianDatePersianDigit(null));
-            Assert.AreEqual("۱۳۹۰/۱/۱", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2011/03/21")));
-            Assert.AreEqual("۱۳۸۹/۱۲/۲۹", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2011/03/20")));
-            Assert.AreEqual("۱۳۸۷/۱۲/۳۰", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2009/03/20")));
-            Assert.AreEqual("۱۳۸۸/۱/۱", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2009/03/21")));
+            Assert.AreEqual("۱۳۹۰/۶/۲۲", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2011/09/13")), "1");
+            Assert.AreEqual(string.Empty, dateTimeHelper.ConvertToPersianDatePersianDigit(null), "2");
+            Assert.AreEqual("۱۳۹۰/۱/۱", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2011/03/21")), "3");
+            Assert.AreEqual("۱۳۸۹/۱۲/۲۹", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2011/03/20")), "4");
+            Assert.AreEqual("۱۳۸۷/۱۲/۳۰", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2009/03/20")), "5");
+            Assert.AreEqual("۱۳۸۸/۱/۱", dateTimeHelper.ConvertToPersianDatePersianDigit(Convert.ToDateTime("2009/03/21")), "6");
         }
 
         [Test]

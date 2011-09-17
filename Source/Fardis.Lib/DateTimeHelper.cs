@@ -67,7 +67,9 @@ namespace Fardis
 
         public bool IsPersianYearLeap(int persianYear)
         {
-            throw new NotImplementedException();
+            PersianCalendar pc = new PersianCalendar();
+
+            return pc.IsLeapYear(persianYear);
         }
 
         public string AddDatePersian(string sourcePersianDate, int day)
@@ -93,7 +95,20 @@ namespace Fardis
 
         public bool IsValidPersianDate(string source)
         {
-            throw new NotImplementedException();
+            bool isValid = true;
+
+            try
+            {
+                string[] tokens = FConvert.ToEnglishDigit(source).Split('/');
+                PersianCalendar pc = new PersianCalendar();
+                pc.ToDateTime(Convert.ToInt32(tokens[0]), Convert.ToInt32(tokens[1]), Convert.ToInt32(tokens[2]), 0, 0, 0, 0);
+            }
+            catch
+            {
+                isValid = false;
+            }
+
+            return isValid;
         }
     }
 }
