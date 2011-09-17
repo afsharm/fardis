@@ -86,7 +86,7 @@ namespace Fardis
         public string DatePartPersian(string datePart, string sourcePersianDate)
         {
             string[] tokens = FConvert.ToEnglishDigit(sourcePersianDate).Split('/');
-            
+
             switch (datePart.ToLower())
             {
                 case "year":
@@ -110,18 +110,11 @@ namespace Fardis
 
             switch (datepart.ToLower())
             {
-                //case "year":
-
-                //    break;
-                //case "month":
-                //    retval = ts.Mon.ToString();
-                //    break;
                 case "day":
                     retval = ts.Days.ToString();
                     break;
                 default:
                     throw new ArgumentException("Invalid datepart");
-                    break;
             }
 
             return retval;
