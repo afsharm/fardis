@@ -41,6 +41,14 @@ namespace Fardis
             string month = tokens[1];
             string day = tokens[2];
 
+            //correcting date with format dd/mm/yyyy
+            if (month.Length == 2 && day.Length == 4 && year.Length == 2)
+            {
+                string temp = day;
+                day = year;
+                year = temp;
+            }
+
             if (year.Length != 2 && year.Length != 4)
                 throw new ArgumentException("persian year must be 2 or 4 digits");
 
