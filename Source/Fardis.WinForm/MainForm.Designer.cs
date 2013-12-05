@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabAudio = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnRead = new System.Windows.Forms.Button();
+            this.txtNumber = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.rtbString = new System.Windows.Forms.RichTextBox();
+            this.txtString = new System.Windows.Forms.TextBox();
+            this.btnGo = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.rtbText = new System.Windows.Forms.RichTextBox();
@@ -49,30 +58,113 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUnicodeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rtbString = new System.Windows.Forms.RichTextBox();
-            this.btnGo = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtString = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.About = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tc1 = new System.Windows.Forms.TabControl();
-            this.label6 = new System.Windows.Forms.Label();
+            this.About = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tabAudio.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.About.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tc1.SuspendLayout();
+            this.About.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(303, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Know more about characters and their Unicode info.";
+            // 
+            // tabAudio
+            // 
+            this.tabAudio.Controls.Add(this.label17);
+            this.tabAudio.Controls.Add(this.btnRead);
+            this.tabAudio.Controls.Add(this.txtNumber);
+            this.tabAudio.Location = new System.Drawing.Point(4, 22);
+            this.tabAudio.Name = "tabAudio";
+            this.tabAudio.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAudio.Size = new System.Drawing.Size(312, 417);
+            this.tabAudio.TabIndex = 3;
+            this.tabAudio.Text = "Audio";
+            this.tabAudio.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(23, 24);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(206, 13);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Enter a number here to be read in Persian:";
+            // 
+            // btnRead
+            // 
+            this.btnRead.Location = new System.Drawing.Point(23, 69);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(75, 23);
+            this.btnRead.TabIndex = 1;
+            this.btnRead.Text = "Read";
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(23, 43);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtNumber.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.rtbString);
+            this.tabPage2.Controls.Add(this.txtString);
+            this.tabPage2.Controls.Add(this.btnGo);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(312, 417);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "String";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // rtbString
+            // 
+            this.rtbString.Location = new System.Drawing.Point(35, 53);
+            this.rtbString.Name = "rtbString";
+            this.rtbString.Size = new System.Drawing.Size(210, 321);
+            this.rtbString.TabIndex = 2;
+            this.rtbString.Text = "";
+            // 
+            // txtString
+            // 
+            this.txtString.Location = new System.Drawing.Point(35, 27);
+            this.txtString.Name = "txtString";
+            this.txtString.Size = new System.Drawing.Size(164, 20);
+            this.txtString.TabIndex = 0;
+            // 
+            // btnGo
+            // 
+            this.btnGo.Location = new System.Drawing.Point(205, 27);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(40, 23);
+            this.btnGo.TabIndex = 1;
+            this.btnGo.Text = "Go!";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // tabPage1
             // 
@@ -81,7 +173,7 @@
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(312, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Unicode Name";
@@ -275,171 +367,125 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Tahoma:";
             // 
-            // rtbString
-            // 
-            this.rtbString.Location = new System.Drawing.Point(35, 53);
-            this.rtbString.Name = "rtbString";
-            this.rtbString.Size = new System.Drawing.Size(210, 321);
-            this.rtbString.TabIndex = 2;
-            this.rtbString.Text = "";
-            // 
-            // btnGo
-            // 
-            this.btnGo.Location = new System.Drawing.Point(205, 27);
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(40, 23);
-            this.btnGo.TabIndex = 1;
-            this.btnGo.Text = "Go!";
-            this.btnGo.UseVisualStyleBackColor = true;
-            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.rtbString);
-            this.tabPage2.Controls.Add(this.btnGo);
-            this.tabPage2.Controls.Add(this.txtString);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(312, 417);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "String";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txtString
-            // 
-            this.txtString.Location = new System.Drawing.Point(35, 27);
-            this.txtString.Name = "txtString";
-            this.txtString.Size = new System.Drawing.Size(164, 20);
-            this.txtString.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Sep. 2011";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 270);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Afshar Mohebbi";
-            // 
-            // About
-            // 
-            this.About.Controls.Add(this.richTextBox1);
-            this.About.Controls.Add(this.panel2);
-            this.About.Controls.Add(this.label12);
-            this.About.Controls.Add(this.label10);
-            this.About.Controls.Add(this.label11);
-            this.About.Location = new System.Drawing.Point(4, 22);
-            this.About.Name = "About";
-            this.About.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.About.Size = new System.Drawing.Size(312, 417);
-            this.About.TabIndex = 2;
-            this.About.Text = "About";
-            this.About.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(22, 80);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(272, 174);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Location = new System.Drawing.Point(6, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(296, 68);
-            this.panel2.TabIndex = 19;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 31);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 13);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "github.com/afsharm/fardis";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Fardis.Properties.Resources.Fardis_Logo_Original;
-            this.pictureBox1.Location = new System.Drawing.Point(148, -10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(14, 8);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Fardis v0.23";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 283);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 13);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "http://afsharm.com";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 296);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "afshar.mohebbi@gmail.com";
-            // 
             // tc1
             // 
             this.tc1.Controls.Add(this.tabPage1);
             this.tc1.Controls.Add(this.tabPage2);
+            this.tc1.Controls.Add(this.tabAudio);
             this.tc1.Controls.Add(this.About);
-            this.tc1.Location = new System.Drawing.Point(11, 52);
+            this.tc1.Location = new System.Drawing.Point(12, 50);
             this.tc1.Name = "tc1";
             this.tc1.SelectedIndex = 0;
             this.tc1.Size = new System.Drawing.Size(320, 443);
             this.tc1.TabIndex = 16;
             // 
-            // label6
+            // About
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(303, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Know more about characters and their Unicode info.";
+            this.About.Controls.Add(this.richTextBox2);
+            this.About.Controls.Add(this.label21);
+            this.About.Controls.Add(this.label22);
+            this.About.Controls.Add(this.label23);
+            this.About.Controls.Add(this.panel3);
+            this.About.Location = new System.Drawing.Point(4, 22);
+            this.About.Name = "About";
+            this.About.Padding = new System.Windows.Forms.Padding(3);
+            this.About.Size = new System.Drawing.Size(312, 417);
+            this.About.TabIndex = 4;
+            this.About.Text = "About";
+            this.About.UseVisualStyleBackColor = true;
+            this.About.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(14, 31);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(131, 13);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "github.com/afsharm/fardis";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Fardis.Properties.Resources.Fardis_Logo_Original;
+            this.pictureBox2.Location = new System.Drawing.Point(148, -10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(158, 82);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(14, 45);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(57, 13);
+            this.label19.TabIndex = 22;
+            this.label19.Text = "Dec. 2013";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(14, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(77, 13);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "Fardis v0.24";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Location = new System.Drawing.Point(3, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(296, 68);
+            this.panel3.TabIndex = 20;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Enabled = false;
+            this.richTextBox2.Location = new System.Drawing.Point(21, 94);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(272, 174);
+            this.richTextBox2.TabIndex = 24;
+            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(19, 297);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(98, 13);
+            this.label21.TabIndex = 23;
+            this.label21.Text = "http://afsharm.com";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(19, 310);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(137, 13);
+            this.label22.TabIndex = 21;
+            this.label22.Text = "afshar.mohebbi@gmail.com";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(19, 284);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 13);
+            this.label23.TabIndex = 22;
+            this.label23.Text = "Afshar Mohebbi";
             // 
             // MainForm
             // 
@@ -451,18 +497,20 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Fardis";
+            this.tabAudio.ResumeLayout(false);
+            this.tabAudio.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tc1.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.About.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tc1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,11 +518,27 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tabAudio;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.RichTextBox rtbString;
+        private System.Windows.Forms.TextBox txtString;
+        private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox rtbText;
-        private System.Windows.Forms.TextBox txtHex;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtDecimal;
+        private System.Windows.Forms.TextBox txtRoya;
+        private System.Windows.Forms.TextBox txtTahoma;
+        private System.Windows.Forms.TextBox txtHex;
+        private System.Windows.Forms.LinkLabel lnkSiteLink;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtCSharpRep;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtArialU;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -483,28 +547,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUnicodeName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox rtbString;
-        private System.Windows.Forms.Button btnGo;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox txtString;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TabPage About;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabControl tc1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCSharpRep;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.LinkLabel lnkSiteLink;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtRoya;
-        private System.Windows.Forms.TextBox txtTahoma;
-        private System.Windows.Forms.TextBox txtDecimal;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TabPage About;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

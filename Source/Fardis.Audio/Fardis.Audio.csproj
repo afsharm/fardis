@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{902D2583-D536-4784-9048-1931973DC59A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fardis.Audio</RootNamespace>
+    <AssemblyName>Fardis.Audio</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>..\..\Library\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Number\PersianNumberRead.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Wave\1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Wave\10.wav" />
+    <EmbeddedResource Include="Wave\11.wav" />
+    <EmbeddedResource Include="Wave\12.wav" />
+    <EmbeddedResource Include="Wave\13.wav" />
+    <EmbeddedResource Include="Wave\14.wav" />
+    <EmbeddedResource Include="Wave\15.wav" />
+    <EmbeddedResource Include="Wave\16.wav" />
+    <EmbeddedResource Include="Wave\17.wav" />
+    <EmbeddedResource Include="Wave\18.wav" />
+    <EmbeddedResource Include="Wave\19.wav" />
+    <EmbeddedResource Include="Wave\2.wav" />
+    <EmbeddedResource Include="Wave\20.wav" />
+    <EmbeddedResource Include="Wave\3.wav" />
+    <EmbeddedResource Include="Wave\30.wav" />
+    <EmbeddedResource Include="Wave\4.wav" />
+    <EmbeddedResource Include="Wave\40.wav" />
+    <EmbeddedResource Include="Wave\5.wav" />
+    <EmbeddedResource Include="Wave\50.wav" />
+    <EmbeddedResource Include="Wave\6.wav" />
+    <EmbeddedResource Include="Wave\60.wav" />
+    <EmbeddedResource Include="Wave\7.wav" />
+    <EmbeddedResource Include="Wave\70.wav" />
+    <EmbeddedResource Include="Wave\8.wav" />
+    <EmbeddedResource Include="Wave\80.wav" />
+    <EmbeddedResource Include="Wave\9.wav" />
+    <EmbeddedResource Include="Wave\90.wav" />
+    <EmbeddedResource Include="Wave\And.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Wave\Invalid.wav" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
+  <data name="richTextBox2.Text" xml:space="preserve">
     <value>Fardis is a tiny project as a library/application that helps Persians and other RTL based languages to have more information about Unicode, character code and other useful info about strings and characters. 
 
 Fardis also has a section related to other localization issues like date conversion and a section related string manipulating and string processing especially for Persian texts.	</value>

@@ -1,10 +1,13 @@
-﻿using System;
+﻿using System.IO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Fardis.Audio;
+using Fardis.Audio.Number;
 
 namespace Fardis
 {
@@ -45,6 +48,25 @@ namespace Fardis
         private void lnkSiteLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(((LinkLabel)sender).Text);
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            int number;
+            if (int.TryParse(txtNumber.Text, out number) == false)
+            {
+                MessageBox.Show("Invalid Number");
+                return;
+            }
+
+            var stream = PersianNumberRead.ReadPersianNumber(number, string.Empty);
+            var player = new System.Media.SoundPlayer(stream);
+            player.Play();
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

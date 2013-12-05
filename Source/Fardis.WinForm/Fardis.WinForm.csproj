@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Fardis</RootNamespace>
     <AssemblyName>Fardis.WinForm</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -79,6 +79,10 @@
     <ProjectReference Include="..\Fardis.Lib\Fardis.Lib.csproj">
       <Project>{81BCE99F-796F-4434-854F-47161D20D535}</Project>
       <Name>Fardis.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fardis.Audio\Fardis.Audio.csproj">
+      <Project>{902d2583-d536-4784-9048-1931973dc59a}</Project>
+      <Name>Fardis.Audio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

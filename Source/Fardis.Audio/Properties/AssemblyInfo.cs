@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Fardis.Lib")]
+[assembly: AssemblyTitle("Fardis.Sound")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Fardis.Lib")]
+[assembly: AssemblyProduct("Fardis.Sound")]
 [assembly: AssemblyCopyright("Copyright © Afshar Mohebbi 2011-2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f30c3ad7-12eb-4123-957a-28064e3225b3")]
+[assembly: Guid("b12845d5-299b-4142-90d4-367b2cf21ef6")]
 
 // Version information for an assembly consists of the following four values:
 //
