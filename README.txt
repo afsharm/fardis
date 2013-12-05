@@ -2,7 +2,9 @@ Fardis is a tiny project as a library/application that helps Persians and other 
 
 Fardis also has a section related to other localization issues like date conversion and a section related string manipulating and string processing especially for Persian texts.
 
+Fardis Additionally have functionality to read Persian Numbers.
+
 For more info visit:
-* http://afsharm.com
-* Email me: afshar.mohebbi@gmail.com
+* http://afsharm.com/
+* Email me: afshar [.] mohebbi [@] gmail [.] com
 * https://github.com/afsharm/fardis
