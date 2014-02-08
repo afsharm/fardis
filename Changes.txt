@@ -1,0 +1,8 @@
+v 0.25, 2/8/2014
+* Added 2 new methods: 
+        string ConvertToPersianDateTime(DateTime? date);
+        string ConvertToPersianDateTimePersianDigit(DateTime? date);
+
+* Converted web address texts into clickable links
+===============
+
