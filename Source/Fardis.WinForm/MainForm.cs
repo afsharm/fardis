@@ -45,7 +45,7 @@ namespace Fardis
             rtbString.Text += "=====\n";
         }
 
-        private void lnkSiteLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(((LinkLabel)sender).Text);
         }
@@ -62,11 +62,6 @@ namespace Fardis
             var stream = PersianNumberRead.ReadPersianNumber(number, string.Empty);
             var player = new System.Media.SoundPlayer(stream);
             player.Play();
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

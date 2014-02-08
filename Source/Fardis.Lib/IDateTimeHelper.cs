@@ -11,5 +11,7 @@ namespace Fardis
         string DatePartPersian(string datePart, string sourcePersianDate);
         string DateDiffPersian(string datepart, string startdate, string enddate);
         bool IsValidPersianDate(string source);
+        string ConvertToPersianDateTime(DateTime? date);
+        string ConvertToPersianDateTimePersianDigit(DateTime? date);
     }
 }

@@ -60,23 +60,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tc1 = new System.Windows.Forms.TabControl();
             this.About = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.tabAudio.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tc1.SuspendLayout();
             this.About.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -267,7 +267,7 @@
             this.lnkSiteLink.TabIndex = 18;
             this.lnkSiteLink.TabStop = true;
             this.lnkSiteLink.Text = "http://www.fileformat.info/";
-            this.lnkSiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSiteLink_LinkClicked);
+            this.lnkSiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // label16
             // 
@@ -381,9 +381,9 @@
             // 
             // About
             // 
+            this.About.Controls.Add(this.linkLabel2);
+            this.About.Controls.Add(this.linkLabel1);
             this.About.Controls.Add(this.richTextBox2);
-            this.About.Controls.Add(this.label21);
-            this.About.Controls.Add(this.label22);
             this.About.Controls.Add(this.label23);
             this.About.Controls.Add(this.panel3);
             this.About.Location = new System.Drawing.Point(4, 22);
@@ -393,59 +393,28 @@
             this.About.TabIndex = 4;
             this.About.Text = "About";
             this.About.UseVisualStyleBackColor = true;
-            this.About.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // label18
+            // linkLabel2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 31);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(131, 13);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "github.com/afsharm/fardis";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(18, 312);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(167, 13);
+            this.linkLabel2.TabIndex = 26;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "mailto:afshar.mohebbi@gmail.com";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
-            // pictureBox2
+            // linkLabel1
             // 
-            this.pictureBox2.Image = global::Fardis.Properties.Resources.Fardis_Logo_Original;
-            this.pictureBox2.Location = new System.Drawing.Point(148, -10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(158, 82);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(14, 45);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(57, 13);
-            this.label19.TabIndex = 22;
-            this.label19.Text = "Dec. 2013";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(14, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(77, 13);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Fardis v0.24";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Location = new System.Drawing.Point(3, 6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 68);
-            this.panel3.TabIndex = 20;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(18, 299);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(103, 13);
+            this.linkLabel1.TabIndex = 25;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "http://afsharm.com/";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // richTextBox2
             // 
@@ -457,26 +426,6 @@
             this.richTextBox2.TabIndex = 24;
             this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(19, 297);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 13);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "http://afsharm.com";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(19, 310);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(137, 13);
-            this.label22.TabIndex = 21;
-            this.label22.Text = "afshar.mohebbi@gmail.com";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -486,6 +435,59 @@
             this.label23.Size = new System.Drawing.Size(81, 13);
             this.label23.TabIndex = 22;
             this.label23.Text = "Afshar Mohebbi";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.linkLabel3);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Location = new System.Drawing.Point(3, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(296, 68);
+            this.panel3.TabIndex = 20;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Fardis.Properties.Resources.Fardis_Logo_Original;
+            this.pictureBox2.Location = new System.Drawing.Point(212, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(79, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(14, 45);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(55, 13);
+            this.label19.TabIndex = 22;
+            this.label19.Text = "Feb. 2014";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(14, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(77, 13);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "Fardis v0.25";
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(14, 28);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(172, 13);
+            this.linkLabel3.TabIndex = 27;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "https://github.com/afsharm/fardis/";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // MainForm
             // 
@@ -508,9 +510,9 @@
             this.tc1.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.About.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,13 +552,13 @@
         private System.Windows.Forms.TabControl tc1;
         private System.Windows.Forms.TabPage About;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }

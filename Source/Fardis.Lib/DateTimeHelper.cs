@@ -12,13 +12,13 @@ namespace Fardis
             if (date == null)
                 return string.Empty;
 
-            PersianCalendar calendar = new PersianCalendar();
+            var calendar = new PersianCalendar();
 
-            int day = calendar.GetDayOfMonth(date.Value);
-            int month = calendar.GetMonth(date.Value);
-            int year = calendar.GetYear(date.Value);
+            var day = calendar.GetDayOfMonth(date.Value);
+            var month = calendar.GetMonth(date.Value);
+            var year = calendar.GetYear(date.Value);
 
-            string persian = string.Format("{0}/{1}/{2}", year, month, day);
+            var persian = string.Format("{0}/{1}/{2}", year, month, day);
 
             return persian;
         }
@@ -30,37 +30,37 @@ namespace Fardis
 
         public DateTime ConvertPersianToGregorianDate(string persianDate)
         {
-            string englishDigitPersianDate = FConvert.ToEnglishDigit(persianDate);
-            string[] tokens = englishDigitPersianDate.Split('/');
+            var englishDigitPersianDate = FConvert.ToEnglishDigit(persianDate);
+            var tokens = englishDigitPersianDate.Split('/');
 
             //validation
             if (tokens.Length != 3)
                 throw new ArgumentException("Persian date must have 3 tokens");
 
-            string year = tokens[0];
-            string month = tokens[1];
-            string day = tokens[2];
+            var year = tokens[0];
+            var month = tokens[1];
+            var day = tokens[2];
 
             //correcting date with format dd/mm/yyyy
             if (month.Length == 2 && day.Length == 4 && year.Length == 2)
             {
-                string temp = day;
+                var temp = day;
                 day = year;
                 year = temp;
             }
 
             if (year.Length != 2 && year.Length != 4)
-                throw new ArgumentException("persian year must be 2 or 4 digits");
+                throw new ArgumentException("Persian year must be 2 or 4 digits");
 
             if (month.Length > 2 || day.Length > 2)
-                throw new ArgumentException("persian month/day must have 2 digit maximum");
+                throw new ArgumentException("Persian month/day must have 2 digit maximum");
 
             if (year.Length == 2)
                 year = "13" + year;
 
-            int yearValue = Convert.ToInt32(year);
-            int monthValue = Convert.ToInt32(month);
-            int dayValue = Convert.ToInt32(day);
+            var yearValue = Convert.ToInt32(year);
+            var monthValue = Convert.ToInt32(month);
+            var dayValue = Convert.ToInt32(day);
 
             if (monthValue < 1 || monthValue > 12)
                 throw new ArgumentException("month must be between 1 and 12");
@@ -68,32 +68,32 @@ namespace Fardis
             if (dayValue < 1 || dayValue > 31)
                 throw new ArgumentException("day must be between 1 and 31");
 
-            PersianCalendar pc = new PersianCalendar();
+            var pc = new PersianCalendar();
 
             return pc.ToDateTime(yearValue, monthValue, dayValue, 0, 0, 0, 0);
         }
 
         public bool IsPersianYearLeap(int persianYear)
         {
-            PersianCalendar pc = new PersianCalendar();
+            var pc = new PersianCalendar();
 
             return pc.IsLeapYear(persianYear);
         }
 
         public string AddDatePersian(string sourcePersianDate, int day)
         {
-            DateTime source = ConvertPersianToGregorianDate(sourcePersianDate);
+            var source = ConvertPersianToGregorianDate(sourcePersianDate);
 
-            DateTime addedDate = source.AddDays(day);
+            var addedDate = source.AddDays(day);
 
-            string target = ConvertToPersianDatePersianDigit(addedDate);
+            var target = ConvertToPersianDatePersianDigit(addedDate);
 
             return target;
         }
 
         public string DatePartPersian(string datePart, string sourcePersianDate)
         {
-            string[] tokens = FConvert.ToEnglishDigit(sourcePersianDate).Split('/');
+            var tokens = FConvert.ToEnglishDigit(sourcePersianDate).Split('/');
 
             switch (datePart.ToLower())
             {
@@ -110,11 +110,11 @@ namespace Fardis
 
         public string DateDiffPersian(string datepart, string startdate, string enddate)
         {
-            DateTime start = ConvertPersianToGregorianDate(startdate);
-            DateTime end = ConvertPersianToGregorianDate(enddate);
+            var start = ConvertPersianToGregorianDate(startdate);
+            var end = ConvertPersianToGregorianDate(enddate);
 
-            TimeSpan ts = end - start;
-            string retval = string.Empty;
+            var ts = end - start;
+            string retval;
 
             switch (datepart.ToLower())
             {
@@ -130,12 +130,12 @@ namespace Fardis
 
         public bool IsValidPersianDate(string source)
         {
-            bool isValid = true;
+            var isValid = true;
 
             try
             {
-                string[] tokens = FConvert.ToEnglishDigit(source).Split('/');
-                PersianCalendar pc = new PersianCalendar();
+                var tokens = FConvert.ToEnglishDigit(source).Split('/');
+                var pc = new PersianCalendar();
                 pc.ToDateTime(Convert.ToInt32(tokens[0]), Convert.ToInt32(tokens[1]), Convert.ToInt32(tokens[2]), 0, 0, 0, 0);
             }
             catch
@@ -144,6 +144,21 @@ namespace Fardis
             }
 
             return isValid;
+        }
+
+        public string ConvertToPersianDateTime(DateTime? date)
+        {
+            if (date == null)
+                return string.Empty;
+
+            var datePart = ConvertToPersianDate(date);
+            var retval = string.Format("{0} - {1}", datePart, date.Value.ToShortTimeString());
+            return retval.Replace("AM", "ق.ظ.").Replace("PM", "ب.ظ.");
+        }
+
+        public string ConvertToPersianDateTimePersianDigit(DateTime? date)
+        {
+            return FConvert.ToPersianDigit(ConvertToPersianDateTime(date));
         }
     }
 }
