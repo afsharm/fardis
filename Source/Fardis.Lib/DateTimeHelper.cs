@@ -152,13 +152,36 @@ namespace Fardis
                 return string.Empty;
 
             var datePart = ConvertToPersianDate(date);
-            var retval = string.Format("{0} - {1}", datePart, date.Value.ToShortTimeString());
-            return retval.Replace("AM", "ق.ظ.").Replace("PM", "ب.ظ.");
+            var retval = string.Format("{0} - {1}", datePart, ConvertToPersianTime(date));
+            return retval;
         }
 
         public string ConvertToPersianDateTimePersianDigit(DateTime? date)
         {
             return FConvert.ToPersianDigit(ConvertToPersianDateTime(date));
+        }
+
+        public string ConvertToPersianTime(DateTime? date)
+        {
+            if (date == null)
+                return string.Empty;
+
+            var retval = date.Value.ToShortTimeString();
+            return retval.Replace("AM", "ق.ظ.").Replace("PM", "ب.ظ.");
+        }
+
+        public string ConvertToPersianTimePersianDigit(DateTime? date)
+        {
+            return FConvert.ToPersianDigit(ConvertToPersianTime(date));
+        }
+
+        public string ToLongPersianDateStringPersianDigit(DateTime? date)
+        {
+            if (date == null)
+                return string.Empty;
+        
+            //todo:
+            return "پنج‌شنبه ۲۸ فروردین ۱۳۹۳";
         }
     }
 }

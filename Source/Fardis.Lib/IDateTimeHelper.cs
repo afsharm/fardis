@@ -13,5 +13,8 @@ namespace Fardis
         bool IsValidPersianDate(string source);
         string ConvertToPersianDateTime(DateTime? date);
         string ConvertToPersianDateTimePersianDigit(DateTime? date);
+        string ConvertToPersianTime(DateTime? date);
+        string ConvertToPersianTimePersianDigit(DateTime? date);
+        string ToLongPersianDateStringPersianDigit(DateTime? date);
     }
 }
