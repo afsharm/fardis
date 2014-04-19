@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace Fardis
@@ -147,6 +148,11 @@ namespace Fardis
                 .Replace("\u0667", "\u0037") //Arabic 7
                 .Replace("\u0668", "\u0038") //Arabic 8
                 .Replace("\u0669", "\u0039"); //Arabic 9
+        }
+
+        public static string ToPersianDigit(int englishOrArabicDigit)
+        {
+            return ToPersianDigit(englishOrArabicDigit.ToString(CultureInfo.InvariantCulture));
         }
     }
 }

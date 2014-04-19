@@ -179,9 +179,101 @@ namespace Fardis
         {
             if (date == null)
                 return string.Empty;
-        
-            //todo:
-            return "پنج‌شنبه ۲۸ فروردین ۱۳۹۳";
+
+            var calendar = new PersianCalendar();
+
+            var day = calendar.GetDayOfMonth(date.Value);
+            var dayOfWeek = calendar.GetDayOfWeek(date.Value);
+            var month = calendar.GetMonth(date.Value);
+            var year = calendar.GetYear(date.Value);
+
+            var persianString = string.Format("{0} {1} {2} {3}", GetPersianNameOfWeek(dayOfWeek),
+                                              FConvert.ToPersianDigit(day), GetPersianNameOfMonth(month),
+                                              FConvert.ToPersianDigit(year));
+
+            return persianString;
+        }
+
+        private string GetPersianNameOfMonth(int month)
+        {
+            string retval;
+            switch (month)
+            {
+                case 1:
+                    retval = "فروردین";
+                    break;
+                case 2:
+                    retval = "اردیبهشت";
+                    break;
+                case 3:
+                    retval = "خرداد";
+                    break;
+                case 4:
+                    retval = "تیر";
+                    break;
+                case 5:
+                    retval = "مرداد";
+                    break;
+                case 6:
+                    retval = "شهریور";
+                    break;
+                case 7:
+                    retval = "مهر";
+                    break;
+                case 8:
+                    retval = "آبان";
+                    break;
+                case 9:
+                    retval = "آذر";
+                    break;
+                case 10:
+                    retval = "دی";
+                    break;
+                case 11:
+                    retval = "بهمن";
+                    break;
+                case 12:
+                    retval = "اسفند";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException("month");
+            }
+
+            return retval;
+        }
+
+        private string GetPersianNameOfWeek(DayOfWeek dayOfWeek)
+        {
+            string retval;
+
+            switch (dayOfWeek)
+            {
+                case DayOfWeek.Sunday:
+                    retval = "یکشنبه";
+                    break;
+                case DayOfWeek.Monday:
+                    retval = "دوشنبه";
+                    break;
+                case DayOfWeek.Tuesday:
+                    retval = "سه‌شنبه";
+                    break;
+                case DayOfWeek.Wednesday:
+                    retval = "چهارشنبه";
+                    break;
+                case DayOfWeek.Thursday:
+                    retval = "پنج‌شنبه";
+                    break;
+                case DayOfWeek.Friday:
+                    retval = "جمعه";
+                    break;
+                case DayOfWeek.Saturday:
+                    retval = "شنبه";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException("dayOfWeek");
+            }
+
+            return retval;
         }
     }
 }
